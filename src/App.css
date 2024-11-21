@@ -1,0 +1,268 @@
+/* Загальні стилі */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #85d3f2; /* Блакитний фон */
+  color: #333;
+}
+
+.app {
+  text-align: center;
+}
+
+/* Верхня панель */
+.header {
+  background-color: #243b6b; /* Темно-синій колір */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.user {
+  font-size: 14px;
+}
+
+/* Основний контейнер To-Do List */
+.todo-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background: #2c64a5; /* Насичений синій */
+  border-radius: 10px; /* Закруглені кути */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легке затемнення */
+  color: white;
+}
+
+.todo-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Форма додавання завдань */
+.task-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.task-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.task-form input::placeholder {
+  color: #aaa;
+}
+
+.task-form button {
+  background-color: #007bff; /* Яскраво-синій */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.task-form button:hover {
+  background-color: #0056b3; /* Темніший синій при наведенні */
+}
+
+/* Список завдань */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #008ed1; /* Блакитний */
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+}
+
+.task-content input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.task-content span {
+  text-decoration: none;
+}
+
+.task-content input[type="checkbox"]:checked + span {
+  text-decoration: line-through; /* Перекреслення виконаного завдання */
+  color: #ddd;
+}
+
+/* Кнопки дій (редагування та видалення) */
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+
+/* Адаптивність */
+@media (max-width: 600px) {
+  .todo-container {
+    padding: 15px;
+  }
+
+  .task-form input[type="text"] {
+    font-size: 14px;
+  }
+
+  .task-form button {
+    font-size: 14px;
+  }
+
+  .task-item {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+/* Режим редагування завдання */
+.edit-mode {
+  display: flex;
+  justify-content: space-between; /* Розділення текстового поля і кнопок */
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-input {
+  flex: 1; /* Розтягується, щоб займати весь простір */
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+/* Контейнер кнопок Save і Cancel */
+.edit-buttons {
+  display: flex;
+  gap: 10px; /* Простір між кнопками */
+}
+
+/* Кнопка Save */
+.save-btn {
+  background-color: #28a745; /* Зелений */
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #218838; /* Темніший зелений */
+}
+
+/* Кнопка Cancel */
+.cancel-btn {
+  background-color: #dc3545; /* Червоний */
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333; /* Темніший червоний */
+}
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #2c64a5;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+}
+
+.auth-container button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background-color: #0056b3;
+}
+
+.auth-container p {
+  margin-top: 10px;
+}
+
+.auth-container a {
+  color: #ffc107;
+  text-decoration: none;
+}
+/* Кнопка Logout */
+.logout-btn {
+  background-color: #dc3545; /* Червоний колір */
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c82333; /* Темніший червоний */
+  color: #f8d7da; /* Світліший текст при наведенні */
+}
+
